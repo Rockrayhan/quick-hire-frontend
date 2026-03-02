@@ -9,6 +9,6 @@ import { AppRoutes } from './routes/AppRoutes.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={AppRoutes} />,
-  </StrictMode>,
+    <RouterProvider router={AppRoutes} />
+  </StrictMode>
 )

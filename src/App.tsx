@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="h-screen flex flex-col">
       <Navbar />
-      <div className="grow-1 mt-10">
+      <div className="grow-1">
         <Outlet />
       </div>
       <Footer />

@@ -16,3 +16,7 @@
 - footer social logos
 - bg shades
 - corner slices
+- loader
+
+### search and filter
+- all jobs page.

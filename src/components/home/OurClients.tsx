@@ -7,7 +7,7 @@ import brand_5 from "../../assets/images/brands/vodafone-2017-logo.png" ;
 
 const OurClients = () => {
     return (
-        <section className="pt-10 md:pt-20 container">
+        <section className="py-10 md:py-20 container">
             <p className='text-muted pb-8 text-lg'>
                 Companies we helped grow
             </p>

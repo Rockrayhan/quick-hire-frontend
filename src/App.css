@@ -1,15 +1,23 @@
 h1, h2, h3, h4, h5, h6 {
   font-family: "ClashDisplay", sans-serif;
+  font-weight: 600;
 }
 
 p {
   font-family: "Epilogue", sans-serif;
 }
 
+.bg-light{
+  background-color: #F8F8FD;
+}
+
 button {
   border-radius: 0px ;
-  padding: 16px 30px;  
+  padding:  22px  32px;  
+  font-weight: 700;
 }
+
+
 
 
 

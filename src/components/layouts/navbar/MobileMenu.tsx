@@ -1,7 +1,8 @@
 import { useState } from "react";
-import NavLinks from "./NavLinks";
-import { Button } from "../ui/button";
+
+import { Button } from "../../ui/button";
 import clsx from "clsx";
+import NavLinks from "./NavLinks";
 
 const MobileMenu = () => {
   const [open, setOpen] = useState<boolean>(false);

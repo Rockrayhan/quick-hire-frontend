@@ -8,7 +8,7 @@
 
 /* custom css */
 .container {
-  @apply mx-auto max-w-screen-xl;
+  @apply mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8;
 }
 
 .center {
@@ -68,10 +68,11 @@
   --secondary: #25324B;
   --muted: #7C8493;
   /* --third: #26A4FF; */
-
-
+  --muted-foreground: #D6DDEB;
 
   --secondary-foreground:#26A4FF;
+
+
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -80,7 +81,6 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
   --primary-foreground: oklch(0.985 0 0);
-  --muted-foreground: oklch(0.556 0 0);
   --accent: oklch(0.97 0 0);
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);

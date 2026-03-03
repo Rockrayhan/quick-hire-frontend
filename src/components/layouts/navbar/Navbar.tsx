@@ -1,7 +1,8 @@
+import Logo from "@/components/common/logo/Logo";
 import NavLinks from "./NavLinks";
-import MobileMenu from "./MobileMenu";
-import { Button } from "../ui/button";
-import Logo from "./Logo";
+import { Button } from "@/components/ui/button";
+import MobileMenu from "@/components/layouts/navbar/MobileMenu";
+
 
 const Navbar = () => {
   return (
@@ -21,7 +22,7 @@ const Navbar = () => {
           <div className="hidden md:flex items-center gap-3">
             <Button variant="ghost">Login</Button>
 
-            <Button className="bg-blue-700 text-white">Sign Up</Button>
+            <Button className="bg-primary text-white">Sign Up</Button>
           </div>
 
           {/* Mobile */}

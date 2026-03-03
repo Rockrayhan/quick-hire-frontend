@@ -1,14 +1,15 @@
-import bannerPerson from "../../assets/images/banner-person.png";
-import underlineImg from "../../assets/images/underline.png";
+import bannerPerson from "../../../assets/images/banner-person.png";
+import underlineImg from "../../../assets/images/underline.png";
 import BannerSearchBar from "./BannerSearchBar";
+
 
 const Banner = () => {
   return (
-    <section className="bg-[#F8F8FD] pb-16 pt-8 relative">
+    <section className="bg-light pb-16 pt-8 relative">
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 items-center gap-10">
         {/* LEFT CONTENT */}
         <div className="space-y-6 text-center md:text-left">
-          <h1 className="text-4xl md:text-7xl font-bold leading-tight w-5/6">
+          <h1 className="text-4xl md:text-7xl font-bold w-5/6 text-secondary">
             Discover more than
             <br />
             <span className="text-secondary-foreground">

@@ -1,10 +1,17 @@
+import { SkeletonCard } from "@/components/provider/SkeletonCard";
 import { useJobs } from "@/hooks/useJobs";
 import { Briefcase, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const AdminDashboard = () => {
+  const { jobs, loading } = useJobs();
 
-    const { jobs, loading } = useJobs();
+  if (loading)
+    return (
+      <div className="h-screen">
+        <SkeletonCard />
+      </div>
+    );
 
   return (
     <div className="space-y-8">

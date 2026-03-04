@@ -2,6 +2,7 @@ import Logo from "@/components/common/logo/Logo";
 import NavLinks from "./NavLinks";
 import { Button } from "@/components/ui/button";
 import MobileMenu from "@/components/layouts/navbar/MobileMenu";
+import { Link } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -20,9 +21,13 @@ const Navbar = () => {
 
           {/* Desktop Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="ghost">Login</Button>
+            <Link to="admin/dashboard">
+            <Button className="btn-space" variant="ghost">Login</Button>
+            </Link>
 
-            <Button className="bg-primary text-white">Sign Up</Button>
+            <Link to="admin/dashboard">
+            <Button className="bg-primary text-white btn-space">Dashboard</Button>
+            </Link>
           </div>
 
           {/* Mobile */}

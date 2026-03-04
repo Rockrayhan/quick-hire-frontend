@@ -11,8 +11,8 @@ const NavLinks = ({ onClick }: NavLinksProps) => {
         Home
       </Link>
 
-      <Link to="/about" onClick={onClick}>
-        Browse Companies
+      <Link to="/all-jobs" onClick={onClick}>
+        Browse Jobs
       </Link>
     </>
   );

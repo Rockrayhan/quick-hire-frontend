@@ -5,7 +5,6 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-
 /* custom css */
 .container {
   @apply mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8;
@@ -14,11 +13,6 @@
 .center {
   @apply flex justify-center items-center;
 }
-
-
-
-
-
 
 @custom-variant dark (&:is(.dark *));
 
@@ -71,7 +65,6 @@
   --muted-foreground: #D6DDEB;
 
   --secondary-foreground:#26A4FF;
-
 
   --radius: 0.625rem;
   --background: oklch(1 0 0);

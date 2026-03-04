@@ -1,7 +1,13 @@
 import App from "@/App";
-import About from "@/pages/About";
+import AdminLayout from "@/components/admin/AdminLayout";
+
+import AdminDashboard from "@/pages/admin/AdminDashboard";
+import ManageJobsPage from "@/pages/admin/ManageJobsPage";
+
+import AllJobs from "@/pages/AllJobs";
 import Home from "@/pages/Home";
 import JobDetails from "@/pages/JobDetails";
+
 import { createBrowserRouter } from "react-router";
 
 export const AppRoutes = createBrowserRouter([
@@ -14,16 +20,30 @@ export const AppRoutes = createBrowserRouter([
         Component: Home,
       },
       {
-        path: "about",
-        Component: About,
-      },
-      {
-        path: "about",
-        Component: About,
+        path: "all-jobs",
+        Component: AllJobs,
       },
       {
         path: "job/:id",
         Component: JobDetails,
+      },
+
+      /* =====================
+         ADMIN ROUTES
+      ====================== */
+      {
+        path: "admin",
+        Component: AdminLayout, 
+        children: [
+          {
+            path: "dashboard",
+            Component: AdminDashboard,
+          },
+          {
+            path: "manage-jobs",
+            Component: ManageJobsPage,
+          },
+        ],
       },
     ],
   },

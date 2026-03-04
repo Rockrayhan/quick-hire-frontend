@@ -16,7 +16,7 @@ const BannerSearchBar = () => {
       <Search/>
 
         <Input
-          className="flex-1 border-b-2 border-gray-300 placeholder:text-muted rounded-none"
+          className="flex-1 border-b-2 border-gray-300 placeholder:text-muted rounded-none py-6"
           placeholder="Job title or keyword"
         />
       </div>
@@ -26,7 +26,7 @@ const BannerSearchBar = () => {
        <MapPin />
 
         <Select>
-          <SelectTrigger className="w-full md:w-45">
+          <SelectTrigger className="w-full md:w-45 py-6">
             <SelectValue placeholder= "Location"/>
           </SelectTrigger>
           <SelectContent>
@@ -39,7 +39,7 @@ const BannerSearchBar = () => {
         </Select>
       </div>
 
-      <Button className="w-full md:w-auto">Search My Job</Button>
+      <Button className="w-full md:w-auto btn-space">Search My Job</Button>
     </div>
   );
 };

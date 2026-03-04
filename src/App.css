@@ -11,10 +11,14 @@ p {
   background-color: #F8F8FD;
 }
 
+.btn-space {
+  padding:  22px  32px;  
+}
+
 button {
   border-radius: 0px ;
-  padding:  22px  32px;  
   font-weight: 700;
+  cursor: pointer;
 }
 
 

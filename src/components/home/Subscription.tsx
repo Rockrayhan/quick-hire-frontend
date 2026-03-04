@@ -12,7 +12,7 @@ const Subscription = () => {
           </h2>
           <p className="text-white">Start posting jobs for only $10.</p>
 
-          <Button className="bg-white text-primary hover:bg-white">
+          <Button className="bg-white text-primary hover:bg-white btn-space">
             Sign Up For Free
           </Button>
         </div>

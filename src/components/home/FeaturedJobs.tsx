@@ -1,30 +1,12 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
 import FeaturedJobCard from "../cards/FeaturedJobCard";
 import RightArrow from "../common/icons/RightArrow";
-import { fetchJobs } from "../../api/jobsApi";
-import type { Job } from "@/types/job";
+import { useJobs } from "@/hooks/useJobs";
+import { SkeletonCard } from "../provider/SkeletonCard";
 
 
 const FeaturedJobs = () => {
-  const [jobs, setJobs] = useState<Job[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const loadJobs = async () => {
-      try {
-        const data = await fetchJobs();
-        setJobs(data);
-      } catch (error) {
-        console.error(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    loadJobs();
-  }, []);
+const { jobs, loading } = useJobs();
 
   return (
     <section className="py-10 md:py-20 container">
@@ -37,7 +19,7 @@ const FeaturedJobs = () => {
         </h2>
 
         <Link
-          to="#"
+          to="/all-jobs"
           className="flex items-center gap-2 text-primary font-semibold hover:underline"
         >
           Show all jobs
@@ -46,7 +28,7 @@ const FeaturedJobs = () => {
       </div>
 
       {/* Loading */}
-      {loading && <p>Loading jobs...</p>}
+      {loading && <SkeletonCard/>}
 
       {/* Jobs Grid */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">

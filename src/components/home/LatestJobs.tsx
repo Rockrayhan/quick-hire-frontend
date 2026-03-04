@@ -1,28 +1,11 @@
 import { Link } from "react-router-dom";
 import RightArrow from "../common/icons/RightArrow";
 import LatestJobCard from "../cards/LatestJobCard";
-import { useEffect, useState } from "react";
-import type { Job } from "@/types/job";
-import { fetchJobs } from "@/api/jobsApi";
+import { useJobs } from "@/hooks/useJobs";
+import { SkeletonCard } from "../provider/SkeletonCard";
 
 const LatestJobs = () => {
-  const [jobs, setJobs] = useState<Job[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const loadJobs = async () => {
-      try {
-        const data = await fetchJobs();
-        setJobs(data);
-      } catch (error) {
-        console.error(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    loadJobs();
-  }, []);
+  const { jobs, loading } = useJobs();
 
   return (
     <section className="py-10 md:py-20 bg-light">
@@ -35,7 +18,7 @@ const LatestJobs = () => {
           </h2>
 
           <Link
-            to="#"
+            to="/all-jobs"
             className="flex items-center gap-2 text-primary font-semibold
                transition-all duration-300
                hover:underline group"
@@ -44,6 +27,9 @@ const LatestJobs = () => {
             <RightArrow />
           </Link>
         </div>
+
+        {/* Loading */}
+        {loading && <SkeletonCard />}
 
         {/* section content */}
 

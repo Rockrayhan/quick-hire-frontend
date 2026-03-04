@@ -1,5 +1,5 @@
 import { fetchJobById } from "@/api/jobsApi";
-import ApplyForm from "@/components/job/ApplyForm";
+import ApplyForm from "@/components/job-details/ApplyForm";
 import type { Job } from "@/types/job";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";

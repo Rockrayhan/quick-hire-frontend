@@ -90,7 +90,7 @@ const Footer = () => {
                 placeholder="Email Address"
                 className="flex-1 p-3 rounded-md border border-gray-600 bg-[#2a2f3b] placeholder-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-blue-600"
               />
-              <button className="bg-blue-600 hover:bg-blue-700 transition text-white font-semibold px-4 py-3 rounded-md">
+              <button className="bg-primary transition text-white font-semibold px-4 py-3 rounded-md">
                 Subscribe
               </button>
             </div>

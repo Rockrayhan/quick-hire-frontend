@@ -15,32 +15,6 @@ export const fetchJobs = async (): Promise<Job[]> => {
   return data.data;
 };
 
-// type JobFilters = {
-//   search?: string;
-//   category?: string;
-//   location?: string;
-// };
-
-// // get jobs with filters
-// export const fetchJobs = async (filters?: JobFilters): Promise<Job[]> => {
-//   const params = new URLSearchParams();
-
-//   if (filters?.search) params.append("search", filters.search);
-
-//   if (filters?.category) params.append("category", filters.category);
-
-//   if (filters?.location) params.append("location", filters.location);
-
-//   const res = await fetch(`${BASE_URL}/jobs?${params.toString()}`);
-
-//   if (!res.ok) {
-//     throw new Error("Failed to fetch jobs");
-//   }
-
-//   const data = await res.json();
-//   return data.data;
-// };
-
 
 
 

@@ -43,12 +43,12 @@ const LatestJobCard = ({ job }: Props) => {
 
             {/* Tags */}
             <div className="flex flex-wrap items-center gap-2 mt-4">
-              <Badge variant="secondary" className="flex items-center gap-1">
+              <Badge  className="flex items-center gap-1 bg-secondary-foreground">
                 <Briefcase className="w-3 h-3" />
                 Full Time
               </Badge>
 
-              <Badge className="bg-blue-50 text-blue-700 hover:bg-blue-100">
+              <Badge className="bg-blue-50 text-primary hover:bg-blue-100">
                  {job.category}
               </Badge>
             </div>

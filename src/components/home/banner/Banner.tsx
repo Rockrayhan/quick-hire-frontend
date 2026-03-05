@@ -6,9 +6,10 @@ import BannerSearchBar from "./BannerSearchBar";
 const Banner = () => {
   return (
     <section className="bg-light pb-16 pt-8 relative">
-      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2  gap-10">
+
         {/* LEFT CONTENT */}
-        <div className="space-y-6 text-center md:text-left">
+        <div className="space-y-6 text-center md:text-left  mt-10 md:mt-20">
           <h1 className="text-4xl md:text-7xl font-bold w-5/6 text-secondary">
             Discover more than
             <br />

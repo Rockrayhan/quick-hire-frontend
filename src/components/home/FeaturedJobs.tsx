@@ -4,13 +4,11 @@ import RightArrow from "../common/icons/RightArrow";
 import { useJobs } from "@/hooks/useJobs";
 import { SkeletonCard } from "../provider/SkeletonCard";
 
-
 const FeaturedJobs = () => {
-const { jobs, loading } = useJobs();
+  const { jobs, loading } = useJobs();
 
   return (
     <section className="py-10 md:py-20 container">
-
       {/* Header */}
       <div className="flex justify-between mb-8 md:mb-12">
         <h2 className="text-3xl md:text-5xl text-secondary">
@@ -28,15 +26,26 @@ const { jobs, loading } = useJobs();
       </div>
 
       {/* Loading */}
-      {loading && <SkeletonCard/>}
+      {loading && <SkeletonCard />}
 
-      {/* Jobs Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      {/* Mobile Slider */}
+      <div className="flex md:hidden gap-4 overflow-x-auto no-scrollbar pb-2 snap-x snap-mandatory">
+        {jobs.map((job) => (
+          <div
+            key={job.id}
+            className="min-w-[85%] snap-start shrink-0"
+          >
+            <FeaturedJobCard job={job} />
+          </div>
+        ))}
+      </div>
+
+      {/* Desktop Grid */}
+      <div className="hidden md:grid grid-cols-4 gap-8">
         {jobs.map((job) => (
           <FeaturedJobCard key={job.id} job={job} />
         ))}
       </div>
-
     </section>
   );
 };

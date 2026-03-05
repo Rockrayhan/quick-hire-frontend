@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import JobTable from "@/components/admin/AllJobsTable";
-import JobFormModal from "@/components/admin/JobFormModal";
+import CreateJobModal from "@/components/admin/CreateJobModal";
 
 import { useJobs } from "@/hooks/useJobs";
 import { useState } from "react";
@@ -30,11 +30,11 @@ const AdminJobsPage = () => {
       )}
 
       {/* Create Job Modal */}
-      <JobFormModal
+      <CreateJobModal
         open={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         onSuccess={() => {
-          refetch();          // reload jobs
+          refetch();          
           setIsModalOpen(false);
         }}
       />

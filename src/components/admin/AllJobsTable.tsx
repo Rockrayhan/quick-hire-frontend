@@ -1,7 +1,15 @@
 import { deleteJob } from "@/api/jobsApi";
 import { Button } from "../ui/button";
-
 import { toast } from "sonner";
+
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
 type Props = {
   jobs: any[];
@@ -22,35 +30,40 @@ const JobTable = ({ jobs, onDeleteSuccess }: Props) => {
   };
 
   return (
-    <div className="overflow-x-auto border rounded-lg bg-white">
-      <table className="min-w-full divide-y divide-gray-200">
-        <thead className="bg-gray-50">
-          <tr>
-            <th className="px-4 py-2 text-left">ID</th>
-            <th className="px-4 py-2 text-left">Title</th>
-            <th className="px-4 py-2 text-left">Company</th>
-            <th className="px-4 py-2 text-left">Location</th>
-            <th className="px-4 py-2 text-left">Category</th>
-            <th className="px-4 py-2 text-center">Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {jobs.map((job) => (
-            <tr key={job.id} className="border-t hover:bg-gray-50">
-              <td className="px-4 py-2">{job.id}</td>
-              <td className="px-4 py-2">{job.title}</td>
-              <td className="px-4 py-2">{job.company}</td>
-              <td className="px-4 py-2">{job.location}</td>
-              <td className="px-4 py-2">{job.category}</td>
-              <td className="px-4 py-2 text-center">
-                <Button size="sm" variant="destructive" onClick={() => handleDelete(job.id)}>
+    <div className="border rounded-lg bg-white">
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHead className="w-15">#</TableHead>
+            <TableHead>Title</TableHead>
+            <TableHead>Company</TableHead>
+            <TableHead>Location</TableHead>
+            <TableHead>Category</TableHead>
+            <TableHead className="text-center">Actions</TableHead>
+          </TableRow>
+        </TableHeader>
+
+        <TableBody>
+          {jobs.map((job, index) => (
+            <TableRow key={job.id}>
+              <TableCell>{index + 1}</TableCell>
+              <TableCell className="font-medium">{job.title}</TableCell>
+              <TableCell>{job.company}</TableCell>
+              <TableCell>{job.location}</TableCell>
+              <TableCell>{job.category}</TableCell>
+              <TableCell className="text-center">
+                <Button
+                  size="sm"
+                  variant="destructive"
+                  onClick={() => handleDelete(job.id)}
+                >
                   Delete
                 </Button>
-              </td>
-            </tr>
+              </TableCell>
+            </TableRow>
           ))}
-        </tbody>
-      </table>
+        </TableBody>
+      </Table>
     </div>
   );
 };

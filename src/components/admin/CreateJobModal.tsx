@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -14,7 +13,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogFooter,
-  DialogTrigger,
+
 } from "@/components/ui/dialog";
 
 type Props = {
@@ -68,7 +67,7 @@ const JobFormModal = ({ open, onClose, onSuccess }: Props) => {
           <Input className="placeholder:text-muted" placeholder="Company" {...register("company")} required />
           <Input className="placeholder:text-muted" placeholder="Location" {...register("location")} required />
           <Input className="placeholder:text-muted" placeholder="Category" {...register("category")} required />
-          <Textarea className="placeholder:text-muted"pmain placeholder="Job Description" {...register("description")} required />
+          <Textarea className="placeholder:text-muted" placeholder="Job Description" {...register("description")} required />
 
           <DialogFooter>
             <Button type="submit" disabled={isSubmitting} className="w-full">

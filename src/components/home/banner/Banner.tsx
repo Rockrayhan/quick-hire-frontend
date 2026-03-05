@@ -10,7 +10,7 @@ const Banner = () => {
 
         {/* LEFT CONTENT */}
         <div className="space-y-6 text-center md:text-left  mt-10 md:mt-20">
-          <h1 className="text-4xl md:text-7xl font-bold w-5/6 text-secondary">
+          <h1 className="text-5xl md:text-7xl font-bold w-5/6 text-secondary">
             Discover more than
             <br />
             <span className="text-secondary-foreground">

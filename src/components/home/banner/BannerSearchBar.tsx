@@ -7,7 +7,7 @@ import { MapPin, Search } from "lucide-react";
 const BannerSearchBar = () => {
   return (
     <div
-      className="flex flex-col md:flex-row gap-3 items-center bg-white p-5 rounded-lg shadow-md
+      className="flex flex-col md:flex-row gap-3 items-center bg-white py-5 px-10 md:px-5 rounded-lg shadow-md
                 relative md:absolute md:bottom-36 md:left-1/2 md:-translate-x-1/2 z-10"
     >
       {/* search by text */}

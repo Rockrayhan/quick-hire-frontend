@@ -30,7 +30,7 @@ const FeaturedJobs = () => {
 
       {/* Mobile Slider */}
       <div className="flex md:hidden gap-4 overflow-x-auto no-scrollbar pb-2 snap-x snap-mandatory">
-        {jobs.map((job) => (
+        {jobs.slice(0, 8).map((job) => (
           <div
             key={job.id}
             className="min-w-[85%] snap-start shrink-0"
@@ -42,7 +42,7 @@ const FeaturedJobs = () => {
 
       {/* Desktop Grid */}
       <div className="hidden md:grid grid-cols-4 gap-8">
-        {jobs.map((job) => (
+        {jobs.slice(0, 8).map((job) => (
           <FeaturedJobCard key={job.id} job={job} />
         ))}
       </div>
